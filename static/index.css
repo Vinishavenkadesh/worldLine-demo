@@ -1,0 +1,44 @@
+form{
+    display:flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.input-group{
+    display:flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.input-group .error{
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.input-group input{
+    border-radius: 5px;
+    border-color: aqua;
+    padding: 10px;
+    margin-top: 3px;
+}
+
+.input-group input:focus{
+    outline: none;
+    border-color: blueviolet;
+}
+
+.input-group.success input{
+    border-color: green;
+}
+
+.input-group.error input{
+    border-color: rgb(182, 35, 35);
+}
+
+.button{
+    padding: 10px 15px;
+}
