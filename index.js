@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname + "/static")))
 
 const sql = mysql.createPool({
     host : "localhost",
-    username : "root",
+    user : "root",
     password : "password",
     database : "forms",
 }).promise();

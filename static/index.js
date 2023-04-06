@@ -6,6 +6,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validityform()) {
     postData();
+    getData();
   }
 });
 
@@ -65,22 +66,22 @@ async function postData() {
 
   await axios
     .post("http://localhost:3000/postData", data)
-    .then((req, res) => console.log(data));
+    .then(console.log(data));
 }
 
 async function getData() {
   const container = document.querySelector("#container");
   const out = await axios
     .get("http://localhost:3000/get-posts")
-    .then((req, res) => res.send(data));
+    .then((res) => res.data);
+    console.log(out);
 
-  out.foreach((val) => {
+  out.forEach((val) => {
     container.innerHTML = 
   `<div>
-  <h1>${val.phoneNumber}</h1>
-  <h1>${val.email}</h1>
+  <h1>${val.PHONENUMBER}</h1>
+  <h1>${val.EMAIL}</h1>
   </div>`;
   });
 }
 
-getData();
